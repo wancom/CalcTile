@@ -1,4 +1,6 @@
-# calctile
+# Calc Tile
+This is a mini game.
+[Play](https://wancom.github.io/calctile)
 
 ## Project setup
 ```
