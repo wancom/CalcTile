@@ -9,7 +9,7 @@ export default {
   name: "Tile",
   data() {
     return {
-      num: Math.floor(Math.random() * 10) + 1
+      num: Math.floor(Math.random() * 5) + 2
     };
   },
   methods: {
@@ -20,7 +20,7 @@ export default {
       this.$refs.tile.classList.add("close");
       this.$emit("tileclick", this.num);
       setTimeout(() => {
-        this.num = Math.floor(Math.random() * 10) + 1;
+        this.num = Math.floor(Math.random() * 5) + 2;
         this.$refs.tile.classList.remove("close");
       }, 2000);
     }
