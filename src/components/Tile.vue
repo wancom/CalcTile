@@ -31,14 +31,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .tile {
-  transition: opacity 0.3s ease 0s;
+  transition: opacity 1s, transform 1s;
   width: 50px;
   height: 50px;
   background-color: wheat;
   font-size: 25pt;
   opacity: 1;
+  transform: rotate(0deg) scale(1, 1);
 }
 .tile.close {
   opacity: 0;
+  transform: rotate(360deg) scale(0.1, 0.1);
 }
 </style>
