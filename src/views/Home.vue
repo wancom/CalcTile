@@ -5,7 +5,7 @@
     <table align="center">
       <tr v-for="n in 6" v-bind:key="n">
         <td v-for="n in 6" v-bind:key="n">
-          <Tile v-on:tileclick="tileclick" />
+          <Tile v-on:tileclick="tileclick" min="2" max="6" />
         </td>
       </tr>
     </table>

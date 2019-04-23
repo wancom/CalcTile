@@ -9,9 +9,12 @@ export default {
   name: "Tile",
   data() {
     return {
-      num: Math.floor(Math.random() * 5) + 2
+      num:
+        Math.floor(Math.random() * (Number(this.max) - Number(this.min) + 1)) +
+        Number(this.min)
     };
   },
+  props: ["min", "max"],
   methods: {
     click: function() {
       if (this.$refs.tile.classList.contains("close")) {
@@ -20,7 +23,10 @@ export default {
       this.$refs.tile.classList.add("close");
       this.$emit("tileclick", this.num);
       setTimeout(() => {
-        this.num = Math.floor(Math.random() * 5) + 2;
+        this.num =
+          Math.floor(
+            Math.random() * (Number(this.max) - Number(this.min) + 1)
+          ) + Number(this.min);
         this.$refs.tile.classList.remove("close");
       }, 2000);
     }
