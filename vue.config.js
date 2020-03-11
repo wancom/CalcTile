@@ -1,3 +1,4 @@
 module.exports = {
-  publicPath: "/calctile"
+  publicPath: "/calctile",
+  outputDir: "docs"
 };
